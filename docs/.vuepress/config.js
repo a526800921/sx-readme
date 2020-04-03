@@ -24,7 +24,7 @@ module.exports = {
             ['/kyy/', '快应用'],
             ['/other/', '其他'],
         ],
-        lastUpdated: true,
+        lastUpdated: '最后更新',
         smoothScroll: true,
     }
 }
