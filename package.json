@@ -1,0 +1,13 @@
+{
+    "name": "lxd-readme",
+    "version": "1.0.0",
+    "description": "项目说明文档",
+    "license": "ISC",
+    "scripts": {
+        "start": "vuepress dev docs",
+        "build": "./node_modules/.bin/vuepress build docs"
+    },
+    "dependencies": {
+        "vuepress": "^1.4.0"
+    }
+}
