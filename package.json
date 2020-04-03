@@ -5,7 +5,8 @@
     "license": "ISC",
     "scripts": {
         "start": "vuepress dev docs",
-        "build": "./node_modules/.bin/vuepress build docs"
+        "build": "./node_modules/.bin/vuepress build docs",
+        "deploy": "bash deploy.sh"
     },
     "dependencies": {
         "vuepress": "^1.4.0"
