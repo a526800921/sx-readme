@@ -8,9 +8,9 @@ sidebarDepth: 2
 
 包括了:
 
- * [npm包](./npm)
- * [H5](./h5)
- * [小程序](./mp)
- * [快应用](./kyy)
- * [其他](./other)
+ * [npm包](/sx-readme/npm)
+ * [H5](/sx-readme/h5)
+ * [小程序](/sx-readme/mp)
+ * [快应用](/sx-readme/kyy)
+ * [其他](/sx-readme/other)
 
