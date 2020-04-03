@@ -1,5 +1,5 @@
 module.exports = {
-    base: '/',
+    base: '/sx-readme/',
     title: '项目文档',
     description: '项目文档',
     port: 8080,
