@@ -290,6 +290,31 @@ updates.forEach(item => watchs[item.key] && (
 
 > 文件 render/store/*.js
 
+store 文件使用格式
+
+```js
+// 状态声明好了之后需要在 /store/index 中加入
+import render, { Store } from '../render'
+
+// 需要 dispatch 从render中获取
+const { $store: { dispatch } } = render
+
+// 需要缓存的字段，可选
+export const storage = ['count']
+// 状态实例，必须导出
+export const store = new Store({
+    count: 0
+})
+
+// 通过 dispatch('<key>/setCount', 1) 调用
+export const setCount = (num) => {
+    // 获取值
+    const { count } = store.get()
+    // 设置值
+    store.set({ count: count + num })
+}
+```
+
 store.js 状态库文件，实现非常简易(stat, set, get, subscribe)，具体见源码
 
 ```js

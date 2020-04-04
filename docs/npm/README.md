@@ -21,6 +21,7 @@ npm仓库源: http://xxx
 ``` js
 import Stat from 'stat'
 import { /* VuePlugin, WatchRoutePlugin, NativePlugin, NativePlugin_3, */ H5_format } from 'stat/plugins'
+// import Vue from 'vue'
 // import hostSdk from 'host-sdk'
 // import WatchRoute from 'watch-route'
 
@@ -29,7 +30,7 @@ const stat = new Stat({
         console.log('埋点上报: ', datas)
     },
 	plugins: [
-        // new VuePlugin(),
+        // new VuePlugin(Vue),
         // new WatchRoutePlugin(WatchRoute),
 		// new NativePlugin(hostSdk),
 		// new NativePlugin_3(hostSdk), // 要求 host-sdk 3.x 版本及以上
@@ -158,7 +159,6 @@ Vue.directive('stat', {
 // 这里的 listen 是 stat 实例的方法，用作监听路由改变
 stat.listen('/', (data, params) => {
     ...
-
     return {
         parentPage: getPageName(parent.href || ''),
         parentParams: { ...parent.query },
@@ -167,9 +167,7 @@ stat.listen('/', (data, params) => {
         
 stat.pipe(datas => {
     ...
-
     datas.forEach(data => !data.pageFrom && (data.pageFrom = pageFrom))
-
     return datas
 })
 ```
